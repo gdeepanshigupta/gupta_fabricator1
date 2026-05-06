@@ -65,6 +65,60 @@
       </div>
     </section>
 
+    <section class="section shop-section">
+      <div class="shell section-head">
+        <p class="eyebrow dark">Buy a service</p>
+        <h2>Choose a fabrication service and send a purchase request.</h2>
+        <p>Final pricing depends on site measurement, material thickness, finish, and installation conditions. The backend stores every request in your admin dashboard.</p>
+      </div>
+      <div class="shell buying-grid">
+        <article class="buy-card">
+          <div>
+            <span class="service-label">Most requested</span>
+            <h2>Gates & Grills</h2>
+            <p>Main gates, sliding gates, window grills, balcony grills, and decorative safety work.</p>
+          </div>
+          <div class="buy-card-footer">
+            <strong>From Rs 220/sq ft</strong>
+            <button class="btn primary" type="button" data-buy-service data-service-id="gates-grills" data-service-name="Gates & Grills">Buy Service</button>
+          </div>
+        </article>
+        <article class="buy-card">
+          <div>
+            <span class="service-label">Premium finish</span>
+            <h2>Railings & Staircases</h2>
+            <p>MS and stainless steel railings, stair frames, handrails, balcony systems, and terrace protection.</p>
+          </div>
+          <div class="buy-card-footer">
+            <strong>From Rs 650/running ft</strong>
+            <button class="btn primary" type="button" data-buy-service data-service-id="railings-staircases" data-service-name="Railings & Staircases">Buy Service</button>
+          </div>
+        </article>
+        <article class="buy-card">
+          <div>
+            <span class="service-label">Commercial</span>
+            <h2>Sheds & Structures</h2>
+            <p>Parking sheds, roof frames, shopfront frames, mezzanine support, and light structural fabrication.</p>
+          </div>
+          <div class="buy-card-footer">
+            <strong>From Rs 145/sq ft</strong>
+            <button class="btn primary" type="button" data-buy-service data-service-id="sheds-structures" data-service-name="Sheds & Structures">Buy Service</button>
+          </div>
+        </article>
+        <article class="buy-card">
+          <div>
+            <span class="service-label">Fast support</span>
+            <h2>Repair & Modification</h2>
+            <p>Repair, extension, alignment, strengthening, repainting, and custom workshop jobs.</p>
+          </div>
+          <div class="buy-card-footer">
+            <strong>Inspection-based estimate</strong>
+            <button class="btn primary" type="button" data-buy-service data-service-id="repair-modification" data-service-name="Repair & Modification">Buy Service</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section split-section">
       <div class="shell split reverse">
         <img src="https://images.pexels.com/photos/29386089/pexels-photo-29386089.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Metal fabrication and welding work">
@@ -81,6 +135,36 @@
       </div>
     </section>
   </main>
+
+  <div class="modal" id="serviceModal" hidden>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close service order form">Close</button>
+      <p class="eyebrow dark">Service purchase</p>
+      <h2 id="serviceModalTitle">Buy Service</h2>
+      <form class="quote-form" id="serviceOrderForm">
+        <input type="hidden" name="serviceId" id="serviceId">
+        <input type="hidden" name="serviceName" id="serviceName">
+        <label>Full name<input type="text" name="name" required placeholder="Your name"></label>
+        <label>Phone number<input type="tel" name="phone" required placeholder="+91"></label>
+        <label>Email<input type="email" name="email" placeholder="you@example.com"></label>
+        <label>Site address<input type="text" name="address" required placeholder="Where should we visit or install?"></label>
+        <label>Approximate size<input type="text" name="size" placeholder="Example: 8 ft x 6 ft, 120 sq ft, 20 running ft"></label>
+        <label>Preferred finish
+          <select name="finish">
+            <option>Standard primer and paint</option>
+            <option>Powder coating</option>
+            <option>Stainless steel polish</option>
+            <option>Anti-rust coating</option>
+            <option>Need recommendation</option>
+          </select>
+        </label>
+        <label>Preferred date<input type="date" name="preferredDate"></label>
+        <label>Notes<textarea name="notes" rows="4" placeholder="Design idea, measurements, budget, urgency"></textarea></label>
+        <button class="btn primary" type="submit">Send Purchase Request</button>
+        <p class="form-note" id="serviceOrderNote" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
 
   <footer class="footer compact"><div class="shell footer-bottom">&copy; 2026 Gupta Fabricator | <a href="contact.html">Request a quote</a></div></footer>
   <a class="whatsapp" href="https://wa.me/919876543210" aria-label="Contact on WhatsApp">WA</a>

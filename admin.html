@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Gupta Fabricator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Admin navigation">
+      <a class="brand" href="index11.html"><span class="brand-mark">GF</span><span><strong>Gupta Fabricator</strong><small>Admin Dashboard</small></span></a>
+      <div class="nav-links admin-nav-links">
+        <a href="index11.html">Website</a>
+        <a class="active" href="admin.html">Admin</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero admin-hero">
+      <div class="shell">
+        <p class="eyebrow">Backend</p>
+        <h1>Client enquiries and service orders.</h1>
+        <p>View customer queries, service purchase requests, update follow-up status, and export records.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell admin-login" id="adminLogin">
+        <form class="quote-form admin-login-form" id="adminLoginForm">
+          <h2>Admin login</h2>
+          <label>Username<input type="text" name="username" value="admin" required></label>
+          <label>Password<input type="password" name="password" required placeholder="Admin password"></label>
+          <button class="btn primary" type="submit">Open Dashboard</button>
+          <p class="form-note" id="adminLoginNote" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="shell admin-dashboard" id="adminDashboard" hidden>
+        <div class="admin-toolbar">
+          <div>
+            <p class="eyebrow dark">Dashboard</p>
+            <h2>Backend records</h2>
+          </div>
+          <div class="admin-actions">
+            <button class="btn" type="button" id="refreshAdmin">Refresh</button>
+            <button class="btn" type="button" id="logoutAdmin">Logout</button>
+          </div>
+        </div>
+
+        <div class="summary-grid" id="summaryGrid">
+          <article><span>Total enquiries</span><strong id="totalEnquiries">0</strong></article>
+          <article><span>Open enquiries</span><strong id="openEnquiries">0</strong></article>
+          <article><span>Total orders</span><strong id="totalOrders">0</strong></article>
+          <article><span>Open orders</span><strong id="openOrders">0</strong></article>
+        </div>
+
+        <div class="records-panel">
+          <div class="records-toolbar">
+            <div class="tab-controls" role="tablist" aria-label="Record type">
+              <button class="tab-control active" type="button" data-admin-tab="enquiries">Enquiries</button>
+              <button class="tab-control" type="button" data-admin-tab="orders">Service Orders</button>
+            </div>
+            <div class="record-tools">
+              <input type="search" id="recordSearch" placeholder="Search records">
+              <button class="btn" type="button" id="exportRecords">Export CSV</button>
+            </div>
+          </div>
+          <p class="form-note" id="adminStatus" aria-live="polite"></p>
+          <div class="table-wrap" id="recordsTable"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

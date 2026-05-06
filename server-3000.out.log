@@ -1,0 +1,5 @@
+Gupta Fabricator backend running at http://localhost:3000/
+Website: http://localhost:3000/index11.html
+Admin dashboard: http://localhost:3000/dmin.html
+Default admin password is admin123. Set ADMIN_PASSWORD before going live.
+Press Ctrl+C to stop.
