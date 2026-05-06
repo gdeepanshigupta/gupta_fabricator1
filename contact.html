@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Gupta Fabricator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="index11.html"><span class="brand-mark">GF</span><span><strong>Gupta Fabricator</strong><small>Iron & Steel Works</small></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      <div class="nav-links" id="site-menu">
+        <a href="index11.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a class="active nav-cta" href="contact.html">Get Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="shell">
+        <p class="eyebrow">Contact</p>
+        <h1>Tell us what you need fabricated.</h1>
+        <p>Share measurements, photos, location, and preferred finish. We will respond with the next step for estimate or site visit.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell contact-grid">
+        <div class="contact-panel">
+          <h2>Workshop details</h2>
+          <p><strong>Phone / WhatsApp</strong><br>+91 98765 43210</p>
+          <p><strong>Email</strong><br>contact@guptafabricator.com</p>
+          <p><strong>Working hours</strong><br>Monday to Saturday, 9:00 AM - 7:00 PM</p>
+          <p><strong>Service area</strong><br>Residential, commercial, and industrial sites across the local region.</p>
+        </div>
+
+        <form class="quote-form" id="quoteForm">
+          <label>Full name<input type="text" name="name" required placeholder="Your name"></label>
+          <label>Phone number<input type="tel" name="phone" required placeholder="+91"></label>
+          <label>Project type
+            <select name="project" required>
+              <option value="">Select a service</option>
+              <option>Gate / Grill</option>
+              <option>Railing / Staircase</option>
+              <option>Shed / Structure</option>
+              <option>Repair / Modification</option>
+              <option>Custom fabrication</option>
+            </select>
+          </label>
+          <label>Project details<textarea name="message" rows="5" placeholder="Measurements, material preference, location, timeline"></textarea></label>
+          <button class="btn primary" type="submit">Send Enquiry</button>
+          <p class="form-note" id="formNote" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer compact"><div class="shell footer-bottom">&copy; 2026 Gupta Fabricator</div></footer>
+  <a class="whatsapp" href="https://wa.me/919876543210" aria-label="Contact on WhatsApp">WA</a>
+  <script src="script.js"></script>
+</body>
+</html>
